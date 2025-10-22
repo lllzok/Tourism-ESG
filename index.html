@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolyU Green Visitor</title>
+  <!-- Local fonts and styles (removed Google Fonts and Tailwind CDN for offline use) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-surface text-slate-900">
+  <div id="app" class="app-shell">
+    <header class="app-header">
+      <div class="header-logo">
+        <img class="polyu-logo" src="images/polyu-logo.png" alt="PolyU logo" />
+        <div class="header-copy">
+          <p class="app-kicker">PolyU Green Visitor</p>
+          <h1 class="hero-title">Welcome to PolyU. Start your eco journey.</h1>
+        </div>
+      </div>
+      <button class="btn-secondary" id="openImpactButton">
+        <i data-feather="award"></i>
+        <span>Impact dashboard</span>
+      </button>
+    </header>
+
+    <!-- Home / Dashboard -->
+    <section class="app-screen" data-screen="home">
+      <div class="score-card">
+        <div>
+          <p class="text-slate-200 text-sm">Current Green Points</p>
+          <p class="score-value" id="scoreValue">0</p>
+        </div>
+        <div class="score-badges" id="scoreBadgesPreview"></div>
+      </div>
+
+      <button class="btn-primary w-full" id="logActionCTA">
+        <span>Log a green action</span>
+        <i data-feather="arrow-right"></i>
+      </button>
+
+      <div class="action-categories">
+        <article class="category-card" data-target="log" data-category="consumption">
+          <div class="category-visual consumption"></div>
+          <h2>Green choices</h2>
+          <p>Log mindful meals, eco shopping, and easy waste cutbacks.</p>
+        </article>
+        <article class="category-card" data-target="log" data-category="recycling">
+          <div class="category-visual recycling"></div>
+          <h2>Recycle & conserve</h2>
+          <p>Drop recyclables, refill bottles, and champion campus resources.</p>
+        </article>
+        <article class="category-card" data-target="log" data-category="exploration">
+          <div class="category-visual exploration"></div>
+          <h2>Explore, learn & advocate</h2>
+          <p>Discover campus green spots, test your eco IQ, and share the journey.</p>
+        </article>
+      </div>
+
+      <section class="impact-highlight">
+        <h3>Today's green highlights</h3>
+        <ul id="recentTimeline" class="timeline"></ul>
+      </section>
+    </section>
+
+    <!-- Log Action Page -->
+    <section class="app-screen" data-screen="log">
+      <header class="sub-header">
+        <button class="icon-btn" data-nav="back">
+          <i data-feather="chevron-left"></i>
+        </button>
+        <div>
+          <p class="section-kicker">Pick a green action</p>
+          <h2 class="section-title">Log a green action</h2>
+        </div>
+        <button class="btn-ghost" data-nav="impact">
+          <i data-feather="trending-up"></i>
+          <span>See impact</span>
+        </button>
+      </header>
+
+      <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="consumption">Consumption</button>
+        <button class="filter-chip" data-filter="recycling">Recycling & Water</button>
+        <button class="filter-chip" data-filter="exploration">Explore & Share</button>
+      </div>
+
+      <div class="action-grid" id="actionGrid"></div>
+    </section>
+
+    <!-- Impact Page -->
+    <section class="app-screen" data-screen="impact">
+      <header class="sub-header">
+        <button class="icon-btn" data-nav="back">
+          <i data-feather="chevron-left"></i>
+        </button>
+        <div>
+          <p class="section-kicker">Your green footprint</p>
+          <h2 class="section-title">Impact dashboard</h2>
+        </div>
+        <div class="sub-header__ghost"></div>
+      </header>
+
+      <section class="impact-summary">
+        <div class="impact-score">
+          <p class="metric-label">Total points</p>
+          <p class="impact-value" id="impactScore">0</p>
+        </div>
+        <div class="impact-metric">
+          <p class="metric-label">Estimated carbon reduction</p>
+          <p class="impact-value" id="impactCarbon">0 g</p>
+        </div>
+        <div class="impact-metric">
+          <p class="metric-label">Total entries</p>
+          <p class="impact-value" id="impactEntries">0</p>
+        </div>
+      </section>
+
+      <section class="achievement-gallery">
+    <h3>Badge gallery</h3>
+        <div class="badge-collection" id="badgeCollection"></div>
+      </section>
+
+      <section class="history-timeline">
+    <h3>Action timeline</h3>
+        <ul class="timeline" id="fullTimeline"></ul>
+      </section>
+    </section>
+  </div>
+
+  <!-- Bottom Navigation (persistent) -->
+  <nav class="bottom-nav" aria-label="Primary">
+    <button class="nav-item active" data-nav="home">
+      <i data-feather="home"></i>
+      <span>Home</span>
+    </button>
+    <button class="nav-item" data-nav="log">
+      <i data-feather="plus-circle"></i>
+      <span>Log action</span>
+    </button>
+    <button class="nav-item" data-nav="impact">
+      <i data-feather="star"></i>
+      <span>Impact</span>
+    </button>
+  </nav>
+
+  <!-- Action Modal -->
+  <div class="action-modal" id="actionModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-sheet" role="document">
+      <header class="modal-header">
+        <div>
+          <p class="modal-points" id="modalPoints">+0 pts</p>
+          <h3 id="modalTitle">Action title</h3>
+        </div>
+        <button class="icon-btn" id="closeModalButton" aria-label="Close">
+          <i data-feather="x"></i>
+        </button>
+      </header>
+
+      <p class="modal-description" id="modalDescription"></p>
+
+      <div class="modal-body" id="modalBody"></div>
+
+      <footer class="modal-footer" id="modalFooter"></footer>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+
+  <script src="vendor/feather.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
