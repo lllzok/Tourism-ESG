@@ -37,9 +37,6 @@ URL: https://lllzok.github.io/Tourism-ESG/
 - **类别三：探索、学习与传播** – 绿色地标打卡、可持续知识问答、分享绿色足迹、邀请朋友参与。
 
 ## Additional project notes
-
-- **Tech**: Vanilla HTML / CSS / JavaScript; styles集中在 `style.css`，交互逻辑在 `script.js`。
-- **Structure**: 通过切换 `section` 实现单页导航；所有资源均使用本地字体与图标，便于离线演示。
 - **Repository layout**:
 
 ```
@@ -57,10 +54,4 @@ URL: https://lllzok.github.io/Tourism-ESG/
 2. Click the main CTA or use the bottom navigation to open the action list.
 3. Choose an action card, follow the prompts to submit or check in, and observe points, badges and timeline updates.
 
-> 🎯 This prototype is a front-end demo. It does not upload files or persist data; refreshing the page resets the state to the sample data.
 
-## Next steps / extensions
-
-- Integrate with a real backend API to sync points and rewards with campus systems.
-- Add mapping, QR scanning or GPS-based check-ins to increase authenticity.
-- Add multi-language support and visitor personalization.
