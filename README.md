@@ -2,6 +2,8 @@
 
 PolyU Green Visitor is a static single-page web app prototype that demonstrates how PolyU visitors can gamify and record green actions. It follows the design brief and showcases points, badges, category filters and interaction feedback in a mobile-first UI.
 
+URL: https://lllzok.github.io/Tourism-ESG/
+
 ## Prototype overview (English)
 
 ### 1. Project snapshot
