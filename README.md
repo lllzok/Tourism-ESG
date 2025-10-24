@@ -16,9 +16,9 @@ URL: https://lllzok.github.io/Tourism-ESG/
 3. **Impact dashboard** – aggregates total points, estimated carbon reduction, entry count; badge wall and full activity timeline motivate continued engagement.
 
 ### 3. Sustainable behavior categories
--- **Category 1: ESG Consumption & Waste Reduction** – mindful dining (clean plate, low-carbon meal, BYO), sustainable shopping (ESG souvenir, e-receipt), daily waste reduction (skip single-use items, save paper).
+- **Category 1: ESG Consumption & Waste Reduction** – mindful dining (clean plate, low-carbon meal, BYO), sustainable shopping (ESG souvenir, e-receipt), daily waste reduction (skip single-use items, save paper).
 - **Category 2: Resource Recycling & Conservation** – recycling (RVM, UniRe® bins), water conservation (drinking fountain refill), energy saving ideas for future expansion (ESG walking, lights-off habits).
--- **Category 3: Exploration, Learning & Advocacy** – ESG landmark tours via GreenMap@PolyU, sustainability quizzes, sharing ESG stories and inviting friends.
+- **Category 3: Exploration, Learning & Advocacy** – ESG landmark tours via GreenMap@PolyU, sustainability quizzes, sharing ESG stories and inviting friends.
 
 ## 原型介绍
 
