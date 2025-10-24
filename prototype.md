@@ -1,18 +1,18 @@
-Project name: PolyU Green Visitor - Campus Green Behavior Recording App Prototype
+Project name: PolyU ESG Visitor - Campus ESG Behavior Recording App Prototype
 
 1. Project goals (The "Why")
 
-The core goal of this project is to design and develop a static front-end prototype for visitors to The Hong Kong Polytechnic University (PolyU). The prototype simulates a mobile web app that uses gamification to encourage and record sustainable behaviors (green actions) on campus, increase visitor engagement and environmental awareness, and showcase PolyU's sustainability efforts and facilities.
+The core goal of this project is to design and develop a static front-end prototype for visitors to The Hong Kong Polytechnic University (PolyU). The prototype simulates a mobile web app that uses gamification to encourage and record sustainable behaviors (ESG actions) on campus, increase visitor engagement and environmental awareness, and showcase PolyU's sustainability efforts and facilities.
 
 Core idea: Turn sustainability into a light, fun and rewarding interactive experience.
 
 2. Core requirements & features (The "What")
 
-Design a front-end app with several core pages to record and track two major categories of green behaviors. All operations are front-end simulations; no real backend database is required.
+Design a front-end app with several core pages to record and track two major categories of ESG behaviors. All operations are front-end simulations; 
 
-Green action recording features to implement:
+ESG action recording features to implement:
 
-Category A: Green consumption & waste reduction (Green Consumption & Waste Reduction)
+Category A: ESG consumption & waste reduction (ESG Consumption & Waste Reduction)
 
 Mindful dining:
 
@@ -22,7 +22,7 @@ Mindful dining:
 
 Sustainable shopping:
 
-- Eco souvenirs: Upload purchase receipts after buying eco items in the souvenir shop.
+- ESG souvenirs: Upload purchase receipts after buying ESG items in the souvenir shop.
 - E-receipts: Users choosing electronic receipts can upload screenshots or perform quick check-ins.
 
 Daily waste reduction:
@@ -43,17 +43,17 @@ Water conservation:
 
 Category C: Exploration, learning & advocacy (Exploration, Learning & Advocacy)
 
-Green exploration:
+ESG exploration:
 
-- Green landmark tour: Follow the GreenMap@PolyU and capture green buildings, rooftop gardens, or solar panels.
+- ESG landmark tour: Follow the GreenMap@PolyU and capture ESG buildings, rooftop gardens, or solar panels.
 
-Green education:
+ESG education:
 
-- Sustainability quiz: Answer quick questions about PolyU green facilities or environmental trivia.
+- Sustainability quiz: Answer quick questions about PolyU ESG facilities or environmental trivia.
 
 Environmental advocacy:
 
-- Share green story: Post your PolyU green experience on social channels and log the proof.
+- Share ESG story: Post your PolyU ESG experience on social channels and log the proof.
 - Invite a friend: Share your points or badges to motivate friends to join the app.
 
 3. Page design & structure (Page Design)
@@ -62,14 +62,14 @@ Use an SPA approach by showing/hiding different div sections to simulate navigat
 
 Page A: Home / Dashboard (Home/Dashboard)
 
-Purpose: Welcome users, show current "green points" and achievements, and provide clear call-to-action entry points.
+Purpose: Welcome users, show current "ESG points" and achievements, and provide clear call-to-action entry points.
 
 Core elements:
 
-- Header welcome line: "Welcome to PolyU — start your green journey!"
+-- Header welcome line: "Welcome to PolyU — start your ESG journey!"
 - Prominent points card: dynamically show the user's total points.
-- Primary CTA: "Record my green action".
-- Category entry cards: three large card buttons pointing to "Green consumption & waste reduction", "Recycling & conservation", and "Exploration, learning & advocacy", each with a distinct visual.
+-- Primary CTA: "Record my ESG action".
+-- Category entry cards: three large card buttons pointing to "ESG consumption & waste reduction", "Recycling & conservation", and "Exploration, learning & advocacy", each with a distinct visual.
 - Bottom navigation (simulated): includes Home, Log action, and My Impact icons.
 
 Page B: Log action selection (Log Action Page)
@@ -78,7 +78,7 @@ Purpose: After clicking the main CTA, this page lists all recordable actions cle
 
 Core elements:
 
-- Grid/list of action options (e.g. Clean Plate, Use RVM, Green landmark tour).
+- Grid/list of action options (e.g. Clean Plate, Use RVM, ESG landmark tour).
 - Each option is a clickable card with an icon, title and short description.
 
 Page C: Action proof upload modal (Action Proof Modal)
@@ -106,7 +106,7 @@ Overall style: modern, clean, friendly and energetic.
 
 Color scheme:
 
-- Primary: greens to represent environment and nature (#4CAF50, #8BC34A) and fresh blue for tech/clarity (#2196F3).
+-- Primary: greens to represent environment and ESG (#4CAF50, #8BC34A) and fresh blue for tech/clarity (#2196F3).
 - Accent: use PolyU's signature brick red (#CC3333) for emphasis on important buttons or icons.
 - Background: large areas of white or light gray (#F5F5F5) to keep layout clean and readable.
 - Typography: choose clear sans-serif fonts such as "Inter", "Helvetica", "Arial".
