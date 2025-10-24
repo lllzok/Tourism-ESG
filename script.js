@@ -57,8 +57,8 @@ const behaviors = [
   {
     id: 'sustainable-souvenir',
     category: 'consumption',
-    title: 'Eco souvenir',
-    description: 'Buy an eco souvenir and upload the receipt.',
+    title: 'ESG souvenir',
+    description: 'Buy an ESG souvenir and upload the receipt.',
     points: 16,
     type: 'upload'
   },
@@ -117,7 +117,7 @@ const behaviors = [
   {
     id: 'green-landmark-tour',
     category: 'exploration',
-    title: 'Green landmark tour',
+    title: 'ESG landmark tour',
     description: 'Visit a spot on the GreenMap@PolyU and check in with a photo.',
     points: 18,
     type: 'upload',
@@ -127,16 +127,16 @@ const behaviors = [
     id: 'sustainability-quiz',
     category: 'exploration',
     title: 'Sustainability quiz',
-    description: 'Answer a quick question about PolyU green facilities.',
+    description: 'Answer a quick question about PolyU ESG facilities.',
     points: 12,
     type: 'checkin',
-    affirmation: 'Nice! Your eco knowledge just levelled up.'
+    affirmation: 'Nice! Your ESG knowledge just levelled up.'
   },
   {
     id: 'share-green-story',
     category: 'exploration',
-    title: 'Share your green story',
-    description: 'Post your PolyU green actions online and log the share.',
+    title: 'Share your ESG story',
+    description: 'Post your PolyU ESG actions online and log the share.',
     points: 16,
     type: 'upload',
     uploadHint: 'Upload a screenshot link or add a quick note for proof.'
@@ -148,17 +148,17 @@ const behaviors = [
     description: 'Encourage a friend to join and share your badge or points.',
     points: 10,
     type: 'checkin',
-    affirmation: 'Sharing green vibes sparks bigger change.'
+    affirmation: 'Sharing ESG vibes sparks bigger change.'
   }
 ];
 
 const badgeBlueprints = [
   {
     id: 'starter',
-    name: 'Green Newcomer',
+    name: 'ESG Newcomer',
     requirement: { points: 20 },
     icon: '🌱',
-    description: 'Earn your first green points and begin your journey.'
+    description: 'Earn your first ESG points and begin your journey.'
   },
   {
     id: 'foodie',
@@ -195,8 +195,8 @@ const userState = {
   history: [
     {
       id: crypto.randomUUID(),
-      behaviorId: 'green-landmark-tour',
-      title: 'Explored the rooftop green farm',
+        behaviorId: 'green-landmark-tour',
+        title: 'Explored the rooftop ESG farm',
       points: 18,
       timestamp: Date.now() - 1000 * 60 * 45,
       evidenceType: 'upload'
@@ -327,7 +327,7 @@ function updateTimeline() {
 
   recentTimeline.innerHTML = '';
   if (recent.length === 0) {
-    recentTimeline.innerHTML = '<li class="empty-state">No records yet — complete your first green action!</li>';
+    recentTimeline.innerHTML = '<li class="empty-state">No records yet — complete your first ESG action!</li>';
   } else {
     recent.forEach((entry) => {
       const li = document.createElement('li');
@@ -350,7 +350,7 @@ function updateTimeline() {
       li.className = 'timeline-item';
       li.innerHTML = `
         <p class="timeline-title">${entry.title}</p>
-        <p class="timeline-description">From: ${behavior ? behavior.title : 'Green action'}</p>
+        <p class="timeline-description">From: ${behavior ? behavior.title : 'ESG action'}</p>
         <p class="timeline-meta">+${entry.points} pts · ${new Date(entry.timestamp).toLocaleString()}</p>
       `;
       fullTimeline.appendChild(li);
@@ -477,7 +477,7 @@ function openBehaviorModal(behavior) {
     const uploadBox = document.createElement('div');
     uploadBox.className = 'upload-box';
     uploadBox.innerHTML = `
-      <p>Upload a photo or screenshot to show your green action.</p>
+      <p>Upload a photo or screenshot to show your ESG action.</p>
       <label for="modalUpload">Click to upload / take photo</label>
       <input type="file" id="modalUpload" accept="image/*" />
       <div class="upload-preview" id="uploadPreview">
@@ -515,7 +515,7 @@ function openBehaviorModal(behavior) {
   } else {
     const affirmation = document.createElement('div');
     affirmation.className = 'checkin-affirmation';
-  affirmation.textContent = behavior.affirmation ?? 'Green action checked in successfully!';
+  affirmation.textContent = behavior.affirmation ?? 'ESG action checked in successfully!';
 
     const submitButton = document.createElement('button');
     submitButton.className = 'btn-primary';
